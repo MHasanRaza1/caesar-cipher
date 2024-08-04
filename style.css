@@ -21,7 +21,7 @@ body{
 
 .container{
     width: 350px;
-    height: 325px;
+    min-height: 325px;
     border: 2px solid black;
     border-radius: 10px;
 }
