@@ -42,19 +42,19 @@ encodeResult.addEventListener('click',Caesarencryption)
 function caesarDecryption(event){
     event.preventDefault();
     let decryptedText = '';
-    let increment = -3;
+    let increment = 3;
     for(let char of decodeInput.value){
         if(isAlphabet(char)){
             let unicodeOfChar = char.charCodeAt(0);
             if(char === char.toLowerCase()){
                 let start = 'a'.charCodeAt(0);
-                let logic = (unicodeOfChar - start + increment) % 26 + start;
+                let logic = (unicodeOfChar - start - increment + 26) % 26 + start;
                 let decryptedChar = String.fromCharCode(logic); 
                 decryptedText += decryptedChar;
             }
             else{
                 let start = 'A'.charCodeAt(0);
-                let logic = (unicodeOfChar - start + increment) % 26 + start;
+                let logic = (unicodeOfChar - start - increment + 26) % 26 + start;
                 let decryptedChar = String.fromCharCode(logic); 
                 decryptedText += decryptedChar;
             } 
